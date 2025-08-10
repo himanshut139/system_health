@@ -34,7 +34,7 @@ jobs:
         pyinstaller --onefile system_utility.py
 
     - name: Upload artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: system_utility-${{ matrix.os }}
         path: dist/*
