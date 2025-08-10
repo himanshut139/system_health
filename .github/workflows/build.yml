@@ -31,10 +31,10 @@ jobs:
 
     - name: Build executable with PyInstaller
       run: |
-        pyinstaller --onefile client/system_utility.py
+        pyinstaller --onefile health_client.py
 
     - name: Upload artifact
       uses: actions/upload-artifact@v4
       with:
-        name: system_utility-${{ matrix.os }}
+        name: health_client-${{ matrix.os }}
         path: dist/*
