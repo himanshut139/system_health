@@ -31,7 +31,7 @@ jobs:
 
     - name: Build executable with PyInstaller
       run: |
-        pyinstaller --onefile system_utility.py
+        pyinstaller --onefile client/system_utility.py
 
     - name: Upload artifact
       uses: actions/upload-artifact@v4
