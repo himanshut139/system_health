@@ -3,7 +3,7 @@
 A system that collects machine health data via a cross-platform utility and displays it on an admin dashboard.  
 Includes:
 
-- **System Utility (Client)** — Windows `.exe`, Linux binary, macOS binary
+- **System Utility (Client)** — Cross-platform binary (`bin/` folder contains ready-to-download builds for Windows, Linux, macOS)
 - **Backend API** — Receives machine data
 - **Admin Dashboard** — Vue 3 frontend to view & filter machine statuses
 
@@ -16,17 +16,15 @@ Includes:
 ---
 
 project-root/
-│
-├── client/ # Cross-platform client utility source code
+├── bin/ # Prebuilt client binaries (Windows, Linux, macOS)
+├── client/ # Source code for cross-platform client utility
 │ └── health_client.py
-│
 ├── frontend/ # Vue 3 frontend app
-│
-├── server/ # Backend API (Flask)
-│ └── app.py
-│
+│ └── ...
+├── server/ # Flask backend API
+│ ├── app.py
+│ └── requirements.txt
 └── README.md
-
 
 
 ---
@@ -40,7 +38,7 @@ project-root/
 ```bash
 cd server
 python -m venv venv
-source venv/bin/activate     # On Windows: venv\Scripts\activate
+source venv/bin/activate    
 pip install -r requirements.txt
 python app.py
 
